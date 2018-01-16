@@ -1,0 +1,10 @@
+C:\Users\FIC\backend\WebServiceCidades\bin\Debug\netcoreapp2.0\WebServiceCidades.deps.json
+C:\Users\FIC\backend\WebServiceCidades\bin\Debug\netcoreapp2.0\WebServiceCidades.runtimeconfig.json
+C:\Users\FIC\backend\WebServiceCidades\bin\Debug\netcoreapp2.0\WebServiceCidades.runtimeconfig.dev.json
+C:\Users\FIC\backend\WebServiceCidades\bin\Debug\netcoreapp2.0\WebServiceCidades.dll
+C:\Users\FIC\backend\WebServiceCidades\bin\Debug\netcoreapp2.0\WebServiceCidades.pdb
+C:\Users\FIC\backend\WebServiceCidades\obj\Debug\netcoreapp2.0\WebServiceCidades.csproj.CoreCompileInputs.cache
+C:\Users\FIC\backend\WebServiceCidades\obj\Debug\netcoreapp2.0\WebServiceCidades.AssemblyInfoInputs.cache
+C:\Users\FIC\backend\WebServiceCidades\obj\Debug\netcoreapp2.0\WebServiceCidades.AssemblyInfo.cs
+C:\Users\FIC\backend\WebServiceCidades\obj\Debug\netcoreapp2.0\WebServiceCidades.dll
+C:\Users\FIC\backend\WebServiceCidades\obj\Debug\netcoreapp2.0\WebServiceCidades.pdb
