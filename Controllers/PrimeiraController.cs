@@ -15,14 +15,15 @@ namespace WebServiceCidades.Controllers
         public IEnumerable<Cidade> Get(){
             return cidadeRep.ListarCidades();
         }
-        [HttpGet("{id}")]
-        public Cidade GetCidade(int Id){
+        [HttpGet("{id}", Name="CidadeAtual")]
+        public Cidade Get(int Id){
             return cidadeRep.ListarCidades().Where(c=> c.Id==Id).FirstOrDefault();
         }
 
         [HttpPost]
-        public bool Post([FromBody] Cidade cidade){
-            return cidadeRep.Cadastrar(cidade);
+        public IActionResult Post([FromBody] Cidade cidade){
+            cidadeRep.Cadastrar(cidade);
+            return CreatedAtRoute("CidadeAtual", new{id=cidade.Id}, cidade);
         }
 
         [HttpDelete("{id}")]

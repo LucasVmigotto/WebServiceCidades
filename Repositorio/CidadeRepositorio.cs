@@ -143,5 +143,36 @@ namespace WebServiceCidades.Repositorio
             }
             return res;
         }
+
+        public Cidade Buscar(int id){
+            Cidade cidade=null;
+            try
+            {
+                sqlConnection=new SqlConnection(sqlString);
+                sqlCommand=new SqlCommand("SELECT * FROM cidade WHERE id=@id", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@id", id);
+                sqlConnection.Open();
+                SqlDataReader sqlDataReader=sqlCommand.ExecuteReader();
+                if(sqlDataReader.Read()){
+                    cidade=new Cidade(Convert.ToInt32(sqlDataReader["id"]),
+                    sqlDataReader["nome"].ToString(), 
+                    sqlDataReader["estado"].ToString(),
+                    Convert.ToInt32(sqlDataReader["habitantes"]));
+                }
+                sqlCommand.Parameters.Clear();
+            }
+            catch(SqlException e)
+            {
+                throw new Exception("Não foi possivel realizar a busca! Descrição do erro: "+e.Message);
+            }
+            catch(Exception e)
+            {
+                throw new Exception("Não foi possivel realizar a busca! Descrição do erro: "+e.Message);
+            }
+            finally{
+                sqlConnection.Close();
+            }
+            return cidade;
+        }
     }
 }
